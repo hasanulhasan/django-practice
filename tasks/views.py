@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def home(request):
-    return HttpResponse("WELCOME to the task management system")
+    context = {
+       "name" : ["Alal", "Dulal", "Helal"],
+       "age": 23
+    }
+    return render(request, "home.html", context)
+    # return HttpResponse("WELCOME to the task management system")
 
 def contact(request):
     return HttpResponse("<h1 style='color: red'>This is contact page</h1>")

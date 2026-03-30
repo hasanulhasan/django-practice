@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is home</h1>
+    {{name}} {% with count=0 %} {% for eachName in name %}
+    <h5>{{eachName}} {{count}}</h5>
+    {{count | add:1 }} {% endfor %} {% endwith %} 
+    {% if age == 22 %}
+     {{age}} 
+    {%endif %}
+  </body>
+</html>
